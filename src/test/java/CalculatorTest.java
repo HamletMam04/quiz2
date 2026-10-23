@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -36,5 +37,19 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         assertEquals(0, calculator.multiply(9, 0));
+    }
+
+    @Test
+    void divideReturnsTheIntegerQuotient() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(3, calculator.divide(13, 4));
+    }
+
+    @Test
+    void divideByZeroThrowsArithmeticException() {
+        Calculator calculator = new Calculator();
+
+        assertThrows(ArithmeticException.class, () -> calculator.divide(8, 0));
     }
 }
