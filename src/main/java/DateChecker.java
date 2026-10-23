@@ -6,6 +6,6 @@ public class DateChecker {
             return true;
         }
 
-        throw new UnsupportedOperationException("Month has not been implemented yet.");
+        return false;
     }
 }
