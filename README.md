@@ -1,26 +1,34 @@
-# Quiz 2
+# Quiz 2 
 
-This project uses Java, JUnit 5, and Maven to practice Test Driven Development (TDD).
+I used Java, junit5 and Maven to complete this project using TDD.
 
-## What the project does
+## Requirements 
 
-- Calculator: adds, subtracts, multiplies, divides, and checks if a number is even.
-- DateChecker: checks whether a month has 31 days and rejects invalid input.
+- Java version 21+ 
+- Maven version 3.9+ 
 
-## How to run the tests
+## What you can do with this project 
 
-Open a terminal in the project folder and run:
+- Add numbers together. Subtract. Multiply. Divide and see if a number is even.
+- Check if a given Month has 31 days. If null is passed an exception will be thrown.
 
-mvn test
+## Details about project 
 
-Java and Maven must be installed first.
+- When dividing two numbers in the Calculator class we use javas divide method which gives us the answer of 3 if we did 13 divided by 4.
+- You will receive an ArithmeticException if you try to divide a number by 0. This is default behavior when using Java. 
+- Month is an Enum that consists of all 12 months.
+- Months that return true for has31Days. January, March, May, July, August, October and December.
+- Months that return false. April, June, September, November and February. 
+- Why is February false? Well it only has 28 or 29 days depending on if its a leap year or not. So it will never have 31 days. 
 
-## Development process
+Run the command below in your terminal to test the project.
 
-For each feature, I will:
-1. Write a test and check that it fails.
-2. Write code to make the test pass.
-3. Clean up the code while keeping the tests passing.
-4. Commit my progress to GitHub.
+``` 
+mvn test 
+``` 
 
-The assignment requires at least 10 meaningful commits. All tests must pass when the project is finished.
+This will generate some files inside of the target folder which will be ignored by git.
+
+When I completed each task I would first write a test and make sure that it failed. Once my test failed I would create code that allowed it to pass. I made sure to commit each change I made throughout the project.
+
+I used the src/main/java directory that Maven created for me. There are many different tests in this project some are from the Calculator and others from DateChecker. I used Junit 5 to help with my tests as well.
