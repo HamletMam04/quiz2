@@ -23,4 +23,18 @@ class CalculatorTest {
 
         assertEquals(-10, calculator.subtract(-4, 6));
     }
+
+    @Test
+    void multiplyHandlesANegativeFactor() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(-12, calculator.multiply(4, -3));
+    }
+
+    @Test
+    void multiplyByZeroReturnsZero() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(0, calculator.multiply(9, 0));
+    }
 }
