@@ -1,5 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -51,5 +53,19 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         assertThrows(ArithmeticException.class, () -> calculator.divide(8, 0));
+    }
+
+    @Test
+    void isEvenReturnsTrueForZero() {
+        Calculator calculator = new Calculator();
+
+        assertTrue(calculator.isEven(0));
+    }
+
+    @Test
+    void isEvenReturnsFalseForAnOddNegativeNumber() {
+        Calculator calculator = new Calculator();
+
+        assertFalse(calculator.isEven(-3));
     }
 }
